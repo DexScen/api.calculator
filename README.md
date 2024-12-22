@@ -4,22 +4,22 @@ API для подсчета выражений
 
 Правильное выражение
 
-curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\"expression\": \"2+2\"}"
+curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\\"expression\\": \\"2+2\\"}"
 {"result":4}
 
 Пример внутренней ошибки, при отправке без "
 
-curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\"expression\": \"2+2}"
+curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\\"expression\\": \\"2+2}"
 {"error":"Internal server error"}
 
 Пример ошибки с неправильным expression
 
-curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\"expression\": \"2+2a\"}"
+curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\\"expression\\": \\"2+2a\\"}"
 {"error":"Expression is not valid"}
 
 Деление на 0
 
-curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\"expression\": \"2/0\"}"
+curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\\"expression\\": \\"2/0\\"}"
 {"error":"Expression is not valid"}
 
 Пример PostMan:
