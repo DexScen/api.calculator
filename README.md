@@ -48,3 +48,8 @@ curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: a
 командой: go run ./cmd/main.go 
 
 С наступающим новым годом !
+
+
+![image](https://github.com/user-attachments/assets/8cdd6f71-cee0-4397-b943-7a7c494d3e4e)
+
+
