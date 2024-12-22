@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ca9033c0-491f-4545-a38d-66a5b052a880)API для подсчета выражений
+API для подсчета выражений
 
 Пример работы с CURL:
 Правильное выражение
