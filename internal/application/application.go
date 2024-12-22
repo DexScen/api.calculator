@@ -101,6 +101,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *Application) RunServer() error {
-	http.HandleFunc("/", Handler)
+	http.HandleFunc("/api/v1/calculate", Handler)
 	return http.ListenAndServe(":"+a.config.Address, nil)
 }
