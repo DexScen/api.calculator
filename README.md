@@ -1,23 +1,29 @@
 API для подсчета выражений
 
 Пример работы с CURL:
+
 Правильное выражение
+
 curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\"expression\": \"2+2\"}"
 {"result":4}
 
 Пример внутренней ошибки, при отправке без "
+
 curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\"expression\": \"2+2}"
 {"error":"Internal server error"}
 
 Пример ошибки с неправильным expression
+
 curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\"expression\": \"2+2a\"}"
 {"error":"Expression is not valid"}
 
 Деление на 0
+
 curl --location http://localhost:8080/api/v1/calculate --header "Content-Type: application/json" --data "{\"expression\": \"2/0\"}"
 {"error":"Expression is not valid"}
 
 Пример PostMan:
+
 Правильное выражение
 
 ![image](https://github.com/user-attachments/assets/5e626412-2697-448b-be1d-fbeb5f9f9e21)
